@@ -1,0 +1,9 @@
+<form [formGroup]="heroForm">
+  <label for="search-text">Search Text </label>
+  <input id="search-text" type="text" formControlName="searchText" />
+</form>
+
+<p *ngFor="let item of data$ | async">
+  {{ item }}
+</p>
+<button (click)="handleClick()">Click Me</button>
