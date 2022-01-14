@@ -23,7 +23,7 @@ import { HeroSearchService } from '../hero.service';
 })
 export class SubComponent implements OnInit, OnDestroy {
   @Output() clicked = new EventEmitter<string>();
-  data$ = this.heroService.search(this.searchText);
+  data$ = this.heroService.search('');
   heroForm = new FormGroup({
     searchText: new FormControl(''),
   });
